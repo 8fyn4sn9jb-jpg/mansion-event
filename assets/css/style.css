@@ -40,30 +40,30 @@ section
 .section.section-secounday{
     
 }
-.section-headline{
-    font-family: "Dancing Script","Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;    text-align: center;
+.section-headline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+
+    z-index: 1000;
+
+    /* 今ある設定 */
+    font-family: "Dancing Script","Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    text-align: center;
     font-size: 35px;
     font-weight: bold;
-    margin: 0 auto;
-    margin-bottom: 0;
+    background-color: #ece2d0;
+    border-radius: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    /* background-color: #efefef;
-    /* padding: 150px; */
-    /* background-size: cover; */ 
-    width: cover;         /* 横幅 */
-    height: 120px;        /* 縦幅 */
-    background-color: #ece2d0; /* 長方形の色（森のイメージの緑） */
-    border-radius: 4px;   /* 角をほんの少し丸くすると綺麗 */
-    background-position: center;
 
-    display: flex;           /* 追加 */
-    justify-content: center; /* 左右中央（文字） */
-    align-items: center;     /* 上下中央（文字） */
-    animation: fadein 2s ease-out forwards;
-
-    
+    margin: 0;
 }
-
 .section-headline span{
     font-size: 16px;
     font-family: "Kaisei Decol","Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
@@ -168,4 +168,37 @@ about
     opacity: 1;           /* 最後はくっきり */
     transform: translateY(0);    /* 本来の位置に戻る */
   }
+
+
+  
+}
+
+.photo-slider {
+    width: 80%;
+    max-width: 900px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide.prev {
+    opacity: 0;
+    transform: translateX(-100%);
 }
