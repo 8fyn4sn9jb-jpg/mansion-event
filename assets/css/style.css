@@ -214,6 +214,6 @@ about
     .photo-slider {
         width: 90%;
         height: 220px;
-        margin: 30px auto 30px; /* 300px → 30px に変更 */
+        margin: 10px auto 30px; /* 300px → 30px に変更 */
     }
 }
