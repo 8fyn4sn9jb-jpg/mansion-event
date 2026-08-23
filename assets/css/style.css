@@ -173,13 +173,14 @@ about
   
 }
 
-.photo-slider {
-    width: 80%;
-    max-width: 900px;
-    height: 500px;
-    margin: 50px auto;
-    position: relative;
-    overflow: hidden;
+@media screen and (max-width: 600px) {
+
+    .photo-slider {
+        width: 90%;
+        height: 250px;
+        margin: 30px auto;
+    }
+
 }
 
 .slide {
