@@ -216,3 +216,13 @@ about
         margin: 130px auto 30px; /* 300px → 30px に変更 */
     }
 }
+
+.text-block {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    font-family: "Kaisei Decol", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
