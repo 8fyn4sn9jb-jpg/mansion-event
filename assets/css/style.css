@@ -33,10 +33,10 @@ body {
 /*
 section
 */
-.section{
+.section {
     padding: 0 0;
+    padding-top: 120px; /* .section-headline の height と合わせる */
 }
-
 .section.section-secounday{
     
 }
@@ -207,9 +207,10 @@ about
 
 /* スマホだけ */
 @media screen and (max-width: 600px) {
-    .photo-slider {
-        width: 90%;
-        height: 220px;
-        margin: 300px auto 30px;
+    .section-headline {
+        height: 140px; /* 実際の高さに合わせて調整 */
+    }
+    .section {
+        padding-top: 140px;
     }
 }
