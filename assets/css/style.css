@@ -177,7 +177,7 @@ about
     width: 60%;
     max-width: 600px;
     height: 300px;
-    margin: 160px auto 40px;
+    margin: 40px auto;
     position: relative;
     overflow: hidden;
 }
@@ -203,14 +203,11 @@ about
     transform: translateX(-100%);
 }
 
-
-/* スマホ */
+/* スマホだけ */
 @media screen and (max-width: 600px) {
-
     .photo-slider {
         width: 90%;
         height: 220px;
-        margin: 150px auto 30px;
+        margin: 250px auto 30px;
     }
-
 }
