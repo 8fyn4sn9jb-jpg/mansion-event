@@ -107,11 +107,12 @@ about
     font-size: 18px;
 }
 
-.about-div img{
+.about-div img {
     width: 100%;
-    height:  auto;
-    animation: fadein 2s ease-out 0.5s forwards; /* 最後に 0.5s（秒）遅らせる設定を追加 */
-    opacity: 0; /* 最初は隠しておく */
+    height: auto;
+    display: block; /* これを追加 */
+    animation: fadein 2s ease-out 0.5s forwards;
+    opacity: 0;
 }
 
 .grid{
@@ -177,10 +178,11 @@ about
     width: 60%;
     max-width: 600px;
     height: 300px;
-    margin: 40px auto;
+    margin: 0 auto; /* 40px → 0 */
     position: relative;
     overflow: hidden;
 }
+
 
 .slide {
     position: absolute;
