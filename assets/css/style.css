@@ -37,6 +37,11 @@ section
     padding: 0 0;
     padding-top: 120px; /* .section-headline の height と合わせる */
 }
+
+.section:first-of-type {
+    padding-top: 120px;
+}
+
 .section.section-secounday{
     
 }
