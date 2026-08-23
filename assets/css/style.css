@@ -204,11 +204,13 @@ about
 }
 
 /* スマホだけ */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     .photo-slider {
-        width: 90%;
-        height: 220px;
-        margin-top: 300px;
-        margin-bottom: 30px;
+        background: red !important;
+        width: 90% !important;
+        height: 220px !important;
+        margin: 40px auto !important;
+        position: relative !important;
+        top: 300px !important;
     }
 }
