@@ -245,9 +245,9 @@ about
 
 .photo {
     width: 100%;
-    max-width: 600px;
+    max-width: none;
     height: 300px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .photo img {
