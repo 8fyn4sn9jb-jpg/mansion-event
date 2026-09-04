@@ -244,20 +244,21 @@ about
 }
 
 .photo {
-    overflow: visible;
+    width: 100%;
     height: auto;
+    margin: 0;
+    overflow: visible;
 }
 
 .photo img {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
 }
 
 @media screen and (max-width: 600px) {
     .photo {
         width: 100%;
-        height: 220px;
+        height: auto;
     }
 }
