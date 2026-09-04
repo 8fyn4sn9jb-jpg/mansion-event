@@ -242,3 +242,21 @@ about
     line-height: 1.7;
     margin-bottom: 10px;
 }
+
+.photo {
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .photo {
+        width: 90%;
+    }
+}
