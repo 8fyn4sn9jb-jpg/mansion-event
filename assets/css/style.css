@@ -237,8 +237,8 @@ about
     margin-bottom: 10px;
 }
 
-.massage p{
+.message p {
     font-size: 20px;
-    line_height: 2;
-    margin_bottom: 20px;
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
