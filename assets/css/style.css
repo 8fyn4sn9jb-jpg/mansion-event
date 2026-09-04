@@ -244,10 +244,7 @@ about
 }
 
 .photo {
-    width: 100%;
-    max-width: none;
-    height: 300px;
-    margin: 0;
+    overflow: visible;
 }
 
 .photo img {
