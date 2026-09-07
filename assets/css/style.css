@@ -288,6 +288,6 @@ about
         width: 100;
         height: auto;
         margin-top: -100;
-        margin-left: 10;
+        margin: -50px 0 0;
     }
 }
