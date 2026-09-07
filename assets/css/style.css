@@ -220,8 +220,8 @@ about
 .text-block {
     width: 80%;
     max-width: 700px;
-    margin: 40px auto;
-    font-family: "Kaisei Decol", "Helvetica Neue", "Helvetica", "Hiragino Sans", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+    margin: 40px auto 0;
+    font-family: "Kaisei Decol", sans-serif;
     font-size: 16px;
     line-height: 1.8;
     color: #333;
@@ -247,12 +247,15 @@ about
     width: 100%;
     height: auto;
     margin: 0;
+    padding: 0;
     overflow: visible;
 }
 
 .photo img {
     width: 100%;
     height: auto;
+    margin: 0;
+    padding: 0;
     display: block;
 }
 
