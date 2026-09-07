@@ -260,10 +260,33 @@ about
     display: block;
 }
 
+.photo_circle {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    margin-top: -50px;
+}
+
+.photo_circle img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+
 @media screen and (max-width: 600px) {
     .photo {
         width: 100%;
         height: auto;
-        margin-top: -250px;
+        margin-top: 0;
+    }
+    .phpto_circle{
+        width: 100;
+        height: auto;
+        margin-top: -100;
     }
 }
