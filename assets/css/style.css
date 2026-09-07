@@ -249,6 +249,7 @@ about
     margin: 0;
     padding: 0;
     overflow: visible;
+    margin-top: -50px;
 }
 
 .photo img {
