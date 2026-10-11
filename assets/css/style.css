@@ -10,7 +10,7 @@ body {
     line-height: 1.5;
     color: #333;  
     
-    background-image: url(".assets/images/haikai.jpg"); 
+    background-image: url("../images/haikai.jpg"); 
     
     /* 画像を画面いっぱいに広げる設定 */
     background-size: cover;
