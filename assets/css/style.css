@@ -294,30 +294,55 @@ about
 }
 
 
-/* 活動風景の見出し部分 */
-.message {
-    padding: 10px 20px 0;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* 見出しとキャラクター */
+/* 活動風景の見出し */
 .message-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* 活動風景の文字画像 */
+.message-title .message-logo {
+    width: 65%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* おにぎりキャラクター */
+.message-title .message-character {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* 見出しの上下の余白 */
+.message {
+    padding: 10px 10px 0;
+    text-align: center;
     margin: 0;
 }
 
-/* 活動風景の文字 */
-.message-title h1 {
-    font-size: 32px;
-    margin: 0;
-}
-/* おにぎりキャラクター */
-.message-title img {
-    width: 1000px;
-    height: 100px;
-    object-fit: contain;
+/* スマートフォン用 */
+@media screen and (max-width: 600px) {
+    .message-title {
+        gap: 5px;
+    }
+
+    .message-title .message-logo {
+        width: 70%;
+        max-width: 350px;
+    }
+
+    .message-title .message-character {
+        width: 65px;
+        height: 65px;
+    }
+
+    .message {
+        padding: 10px 5px 0;
+    }
 }
