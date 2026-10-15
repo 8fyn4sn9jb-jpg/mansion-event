@@ -299,55 +299,65 @@ about
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin: 0 auto;
+    gap: 15px;
+
+    width: 100%;
+    margin: -20px auto 30px;
     padding: 0;
 }
 
 /* 活動風景の文字画像 */
 .message-title .message-logo {
-    width: 75%;
-    max-width: 550px;
-    height: auto;
-    object-fit: contain;
+    display: block;
+
+    width: 550px !important;
+    max-width: 70% !important;
+    height: auto !important;
+    flex-shrink: 0;
 }
 
 /* おにぎりキャラクター */
 .message-title .message-character {
-    width: 110px;
-    height: 110px;
-    object-fit: contain;
+    display: block;
+
+    width: 130px !important;
+    max-width: 20% !important;
+    height: auto !important;
+    flex-shrink: 0;
 }
 
-/* 見出しの上下の余白 */
+/* 活動風景のセクション */
 .message {
-    padding: 10px 10px 0;
-    text-align: center;
+    padding: 0 10px;
     margin: 0;
+    text-align: center;
 }
 
+/* スマホ用 */
 @media screen and (max-width: 600px) {
+
     .message-title {
-        display: flex;
         justify-content: flex-start;
-        align-items: center;
         gap: 5px;
-        padding-left: 5%;
+        margin: -20px auto 30px;
+        padding-left: 4%;
     }
 
+    /* 文字画像を大きくする */
     .message-title .message-logo {
-        width: 65%;
-        max-width: 350px;
-        height: auto;
+        width: 450px !important;
+        max-width: 72% !important;
+        height: auto !important;
     }
 
+    /* おにぎりを大きくする */
     .message-title .message-character {
-        width: 85px;
-        height: 85px;
-        object-fit: contain;
+        width: 100px !important;
+        max-width: 22% !important;
+        height: auto !important;
     }
 
     .message {
-        padding: 10px 5px 0;
+        padding: 0 5px;
     }
 }
