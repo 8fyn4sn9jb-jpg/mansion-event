@@ -308,90 +308,79 @@ var SCHEDULE_SHEET_URL = "";
     });
 
 
-    // ========================================
-    // メール送信
-    // ========================================
+// ========================================
+// メール送信
+// ========================================
 
-    send.addEventListener('click',function(){
+send.addEventListener('click', function(){
 
-        if(!CONTACT_EMAIL || CONTACT_EMAIL === "ここにメールアドレスを入力"){
+    if(!CONTACT_EMAIL || CONTACT_EMAIL === "ここにメールアドレスを入力"){
 
-            msg.textContent = 'メールアドレスが設定されていません。';
-            msg.hidden = false;
+        msg.textContent = 'メールアドレスが設定されていません。';
+        msg.hidden = false;
+        return;
+    }
 
-            return;
+    send.disabled = true;
+    send.textContent = '送信中...';
+
+    var d = new FormData(form);
+
+    fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, {
+
+        method: 'POST',
+
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+
+        body: JSON.stringify({
+
+            name: d.get('name') || '（無記名）',
+            room: d.get('room') || '',
+            kind: d.get('kind'),
+            message: txt.value,
+            _subject: 'おむすびころりん：お問い合わせ'
+
+        })
+
+    })
+
+    .then(function(response){
+        return response.json();
+    })
+
+    .then(function(data){
+
+        console.log('FormSubmitの返答:', data);
+
+        if(String(data.success) !== 'true'){
+
+            throw new Error(data.message || '送信に失敗しました');
+
         }
 
-        send.disabled = true;
-        send.textContent = '送信中...';
+        msg.textContent = '送信しました！ありがとうございます。';
+        msg.hidden = false;
 
-        var d = new FormData(form);
+        send.textContent = '送信済み';
 
-        fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL,{
+    })
 
-            method:'POST',
+    .catch(function(error){
 
-            headers:{
-                'Content-Type':'application/json',
-                'Accept':'application/json'
-            },
+        console.error(error);
 
-            body:JSON.stringify({
+        msg.textContent = '送信エラー：' + error.message;
+        msg.hidden = false;
 
-                name: d.get('name') || '（無記名）',
-
-                room: d.get('room') || '',
-
-                kind: d.get('kind'),
-
-                message: txt.value,
-
-                _subject: 'おむすびころりん：お問い合わせ'
-
-            })
-
-        })
-
-        .then(function(response){
-
-            if(!response.ok){
-                throw new Error('送信に失敗しました');
-            }
-
-            return response.json();
-
-        })
-
-        .then(function(data){
-
-            if(String(data.success) !== 'true'){
-                throw new Error('送信に失敗しました');
-            }
-
-            msg.textContent = '送信しました！ありがとうございます。';
-            msg.hidden = false;
-
-            send.textContent = '送信済み';
-
-        })
-
-        .catch(function(error){
-
-            console.error(error);
-
-            msg.textContent =
-                '送信できませんでした。時間をおいて再度お試しください。';
-
-            msg.hidden = false;
-
-            send.disabled = false;
-            send.textContent = 'この内容を送信する';
-
-        });
+        send.disabled = false;
+        send.textContent = 'この内容を送信する';
 
     });
 
-
+});
     // ========================================
     // コピー
     // ========================================
