@@ -2,7 +2,7 @@
 // 設定
 // ========================================
 
-// 運営側のメールアドレスを入力
+// 運営側のメールアドレス
 var CONTACT_EMAIL = "1k0n2t7@gmail.com";
 
 // ========================================
@@ -192,8 +192,6 @@ var SCHEDULE_SHEET_URL = "";
 
     if(s.length < 2) return;
 
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
     var c = 0;
 
     setInterval(function(){
@@ -262,7 +260,6 @@ var SCHEDULE_SHEET_URL = "";
     var txt = document.getElementById('r-text');
     var err = document.getElementById('f-err');
     var msg = document.getElementById('r-msg');
-
     var send = document.getElementById('r-send');
 
     // 入力内容を作成
@@ -308,79 +305,84 @@ var SCHEDULE_SHEET_URL = "";
     });
 
 
-// ========================================
-// メール送信
-// ========================================
+    // ========================================
+    // メール送信
+    // ========================================
 
-send.addEventListener('click', function(){
+    send.addEventListener('click',function(){
 
-    if(!CONTACT_EMAIL || CONTACT_EMAIL === "ここにメールアドレスを入力"){
+        if(!CONTACT_EMAIL){
 
-        msg.textContent = 'メールアドレスが設定されていません。';
-        msg.hidden = false;
-        return;
-    }
+            msg.textContent = 'メールアドレスが設定されていません。';
+            msg.hidden = false;
 
-    send.disabled = true;
-    send.textContent = '送信中...';
+            return;
+        }
 
-    var d = new FormData(form);
+        send.disabled = true;
+        send.textContent = '送信中...';
 
-    fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, {
+        var d = new FormData(form);
 
-        method: 'POST',
+        fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL,{
 
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
+            method:'POST',
 
-        body: JSON.stringify({
+            headers:{
+                'Content-Type':'application/json',
+                'Accept':'application/json'
+            },
 
-            name: d.get('name') || '（無記名）',
-            room: d.get('room') || '',
-            kind: d.get('kind'),
-            message: txt.value,
-            _subject: 'おむすびころりん：お問い合わせ'
+            body:JSON.stringify({
+
+                name:d.get('name') || '（無記名）',
+                room:d.get('room') || '',
+                kind:d.get('kind'),
+                message:txt.value,
+                _subject:'おむすびころりん：お問い合わせ'
+
+            })
 
         })
 
-    })
+        .then(function(response){
 
-    .then(function(response){
-        return response.json();
-    })
+            return response.json();
 
-    .then(function(data){
+        })
 
-        console.log('FormSubmitの返答:', data);
+        .then(function(data){
 
-        if(String(data.success) !== 'true'){
+            console.log('FormSubmitの返答:',data);
 
-            throw new Error(data.message || '送信に失敗しました');
+            if(String(data.success) !== 'true'){
 
-        }
+                throw new Error(data.message || '送信に失敗しました');
 
-        msg.textContent = '送信しました！ありがとうございます。';
-        msg.hidden = false;
+            }
 
-        send.textContent = '送信済み';
+            msg.textContent = '送信しました！ありがとうございます。';
+            msg.hidden = false;
 
-    })
+            send.textContent = '送信済み';
 
-    .catch(function(error){
+        })
 
-        console.error(error);
+        .catch(function(error){
 
-        msg.textContent = '送信エラー：' + error.message;
-        msg.hidden = false;
+            console.error(error);
 
-        send.disabled = false;
-        send.textContent = 'この内容を送信する';
+            msg.textContent = '送信エラー：' + error.message;
+            msg.hidden = false;
+
+            send.disabled = false;
+            send.textContent = 'この内容を送信する';
+
+        });
 
     });
 
-});
+
     // ========================================
     // コピー
     // ========================================
