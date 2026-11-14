@@ -1,5 +1,5 @@
 // ===== 設定：お問い合わせ・募集の送り先メールアドレス（空ならコピー方式のみ） =====
-var CONTACT_EMAIL = "";
+var CONTACT_EMAIL = "1k0n2t7@gmail.com";
 
 // ===== 開催日程の表示 =====
 // 日程の元データ：①スプレッドシート（SCHEDULE_SHEET_URL を入れたとき）②schedule.js
