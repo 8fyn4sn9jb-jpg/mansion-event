@@ -1,98 +1,209 @@
 <!DOCTYPE html>
-<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 <title>おむすびころりん｜マンションの交流イベント</title>
-<meta name="description" content="マンション内で開いているゆるやかな交流イベントの案内ページ"><meta name="robots" content="noindex, nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<meta name="description" content="マンション内で開いているゆるやかな交流イベントの案内ページ">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+
 <h1 class="sr-only">おむすびころりん</h1>
+
 <main>
-<section class="hero"><img src="./assets/images/hero.jpg" alt="お結びころりん"></section>
 
+<!-- メイン画像 -->
+<section class="hero">
+    <img src="./assets/images/hero.jpg" alt="おむすびころりん">
+</section>
+
+<!-- 活動紹介 -->
 <section class="activity wrap">
-  <div class="activity-title">
-    <img class="logo" src="./assets/images/title.webp" alt="活動風景">
-    <img class="chara hop" src="./assets/images/chara1.webp" alt="おにぎりキャラクター">
-  </div>
-  <div class="slider" aria-label="活動風景の写真">
-    <img class="slide active" src="./assets/images/event2.jpg" alt="お茶を飲みながらおしゃべり">
-    <img class="slide" src="./assets/images/event4.jpg" alt="あみぐるみ教室の様子">
-    <img class="slide" src="./assets/images/event3.jpg" alt="手作りのあみぐるみ">
-    <img class="slide" src="./assets/images/event5.jpg" alt="編み物の手元">
-    <img class="slide top" src="./assets/images/event6.jpg" alt="編み物に挑戦する子ども">
-    <img class="slide" src="./assets/images/event1.jpg" alt="羊のあみぐるみ">
-    <img class="slide" src="./assets/images/event7.jpg" alt="編み方を教え合う様子">
-    <img class="slide" src="./assets/images/event8.jpg" alt="みんなで集まった教室">
-  </div>
-  <div class="panel">
-    <p>幅広い世代でみんなの「普段の笑顔」がもしもの時の安心につながっていく。そんな温かい居場所をマンションの中に目指しています。お茶を飲みながら、お互いの趣味や「やってみたい！！」を持ちよってゆったりおしゃべりしませんか？気軽にふらっと立ち寄れる心地いいつながりをここから～</p>
-  </div>
+
+    <div class="activity-title">
+        <img class="logo" src="./assets/images/title.webp" alt="活動風景">
+        <img class="chara hop" src="./assets/images/chara1.webp" alt="おにぎりキャラクター">
+    </div>
+
+    <div class="slider" aria-label="活動風景の写真">
+        <img class="slide active" src="./assets/images/event2.jpg" alt="お茶を飲みながらおしゃべり">
+        <img class="slide" src="./assets/images/event4.jpg" alt="あみぐるみ教室の様子">
+        <img class="slide" src="./assets/images/event3.jpg" alt="手作りのあみぐるみ">
+        <img class="slide" src="./assets/images/event5.jpg" alt="編み物の手元">
+        <img class="slide top" src="./assets/images/event6.jpg" alt="編み物に挑戦する子ども">
+        <img class="slide" src="./assets/images/event1.jpg" alt="羊のあみぐるみ">
+        <img class="slide" src="./assets/images/event7.jpg" alt="編み方を教え合う様子">
+        <img class="slide" src="./assets/images/event8.jpg" alt="みんなで集まった教室">
+    </div>
+
+    <div class="panel">
+        <p>
+            幅広い世代でみんなの「普段の笑顔」がもしもの時の安心につながっていく。
+            そんな温かい居場所をマンションの中に目指しています。
+            お茶を飲みながら、お互いの趣味や「やってみたい！！」を持ちよって
+            ゆったりおしゃべりしませんか？
+            気軽にふらっと立ち寄れる心地いいつながりをここから～
+        </p>
+    </div>
+
 </section>
 
+<!-- 活動内容 -->
 <section class="wrap">
-  <img class="banner" src="./assets/images/banner.webp" alt="こんなことやってます！">
-  <img class="circles" src="./assets/images/circles.webp" alt="活動の写真">
+    <img class="banner" src="./assets/images/banner.webp" alt="こんなことやってます！">
+    <img class="circles" src="./assets/images/circles.webp" alt="活動の写真">
 </section>
 
-
+<!-- 開催日程 -->
 <section class="wrap schedule" id="schedule">
-  <h2>開催のご案内</h2>
-  <dl class="panel schedule-list">
-    <div><dt>日にち</dt><dd id="sch-date">日程は決まり次第お知らせします</dd></div>
-    <div><dt>時間</dt><dd id="sch-time">未定</dd></div>
-    <div id="sch-memo-row" hidden><dt>ひとこと</dt><dd id="sch-memo"></dd></div>
-  </dl>
+
+    <h2>開催のご案内</h2>
+
+    <dl class="panel schedule-list">
+        <div>
+            <dt>日にち</dt>
+            <dd id="sch-date">日程は決まり次第お知らせします</dd>
+        </div>
+
+        <div>
+            <dt>時間</dt>
+            <dd id="sch-time">未定</dd>
+        </div>
+
+        <div id="sch-memo-row" hidden>
+            <dt>ひとこと</dt>
+            <dd id="sch-memo"></dd>
+        </div>
+    </dl>
+
 </section>
 
+<!-- 募集フォーム -->
 <section class="wrap request" id="request">
-  <div class="request-head">
-    <h2>やってみたいこと、教えてください</h2>
-    <img class="chara sway" src="./assets/images/chara2.webp" alt="">
-  </div>
-  <p class="request-lead">「こんなことやってみたい」「これなら教えられるよ」「ちょっと聞いてみたい」。どんな小さなことでも気軽にどうぞ。</p>
 
-  <form id="reqForm" class="panel form" novalidate>
-    <fieldset>
-      <legend>どんなお話ですか？</legend>
-      <div class="chips">
-        <label class="chip"><input type="radio" name="kind" value="やってみたいこと" checked><span>やってみたい</span></label>
-        <label class="chip"><input type="radio" name="kind" value="教えられること"><span>教えられる</span></label>
-        <label class="chip"><input type="radio" name="kind" value="参加したい"><span>参加したい</span></label>
-        <label class="chip"><input type="radio" name="kind" value="質問・その他"><span>質問・その他</span></label>
-      </div>
-    </fieldset>
-    <div class="field">
-      <label for="f-name">お名前（ニックネームでOK）</label>
-      <input id="f-name" name="name" type="text" autocomplete="nickname">
+    <div class="request-head">
+        <h2>やってみたいこと、教えてください</h2>
+        <img class="chara sway" src="./assets/images/chara2.webp" alt="">
     </div>
-    <div class="field">
-      <label for="f-room">お部屋番号<small>（任意）</small></label>
-      <input id="f-room" name="room" type="text" inputmode="numeric" autocomplete="off">
-    </div>
-    <div class="field">
-      <label for="f-body">内容</label>
-      <textarea id="f-body" name="body" rows="5" placeholder="例：みんなでお花見がしたいです！"></textarea>
-      <p class="err" id="f-err" hidden>内容を書いてください。</p>
-    </div>
-    <button class="btn" type="submit">送る内容を確認する</button>
-  </form>
 
-  <div id="reqResult" class="panel result" hidden aria-live="polite">
-    <h3>ありがとうございます！</h3>
-    <p>下の内容を、運営メンバーに送ってください。</p>
-    <textarea id="r-text" readonly rows="6"></textarea>
-    <div class="result-actions">
-      <button class="btn" type="button" id="r-copy">内容をコピー</button>
-      <a class="btn btn-sub" id="r-mail" href="#" hidden>メールで送る</a>
-      <button class="btn btn-sub" type="button" id="r-back">書き直す</button>
+    <p class="request-lead">
+        「こんなことやってみたい」
+        「これなら教えられるよ」
+        「ちょっと聞いてみたい」。
+        どんな小さなことでも気軽にどうぞ。
+    </p>
+
+    <form id="reqForm" class="panel form" novalidate>
+
+        <fieldset>
+            <legend>どんなお話ですか？</legend>
+
+            <div class="chips">
+
+                <label class="chip">
+                    <input type="radio" name="kind" value="やってみたいこと" checked>
+                    <span>やってみたい</span>
+                </label>
+
+                <label class="chip">
+                    <input type="radio" name="kind" value="教えられること">
+                    <span>教えられる</span>
+                </label>
+
+                <label class="chip">
+                    <input type="radio" name="kind" value="参加したい">
+                    <span>参加したい</span>
+                </label>
+
+                <label class="chip">
+                    <input type="radio" name="kind" value="質問・その他">
+                    <span>質問・その他</span>
+                </label>
+
+            </div>
+        </fieldset>
+
+        <div class="field">
+            <label for="f-name">お名前（ニックネームでOK）</label>
+            <input id="f-name" name="name" type="text" autocomplete="nickname">
+        </div>
+
+        <div class="field">
+            <label for="f-room">お部屋番号<small>（任意）</small></label>
+            <input id="f-room" name="room" type="text" inputmode="numeric" autocomplete="off">
+        </div>
+
+        <div class="field">
+            <label for="f-body">内容</label>
+
+            <textarea
+                id="f-body"
+                name="body"
+                rows="5"
+                placeholder="例：みんなでお花見がしたいです！"
+            ></textarea>
+
+            <p class="err" id="f-err" hidden>
+                内容を書いてください。
+            </p>
+        </div>
+
+        <button class="btn" type="submit">
+            送る内容を確認する
+        </button>
+
+    </form>
+
+    <!-- 送信内容の確認 -->
+    <div id="reqResult" class="panel result" hidden aria-live="polite">
+
+        <h3>送信内容の確認</h3>
+
+        <p>以下の内容で運営メンバーに送信します。</p>
+
+        <textarea id="r-text" readonly rows="6"></textarea>
+
+        <div class="result-actions">
+
+            <button class="btn" type="button" id="r-send">
+                この内容を送信する
+            </button>
+
+            <button class="btn btn-sub" type="button" id="r-copy">
+                内容をコピー
+            </button>
+
+            <button class="btn btn-sub" type="button" id="r-back">
+                書き直す
+            </button>
+
+        </div>
+
+        <p class="copy-msg" id="r-msg" hidden></p>
+
     </div>
-    <p class="copy-msg" id="r-msg" hidden></p>
-  </div>
+
 </section>
+
 </main>
-<footer class="site-footer"><p>&copy; おむすびころりん ／ 住民向け限定ページ</p></footer>
+
+<footer class="site-footer">
+    <p>&copy; おむすびころりん ／ 住民向け限定ページ</p>
+</footer>
+
 <script src="./assets/js/schedule.js"></script>
 <script src="./assets/js/app.js"></script>
-</body></html>
+
+</body>
+</html>
