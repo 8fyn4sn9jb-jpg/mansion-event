@@ -596,10 +596,6 @@ h1, h2, h3, p {
         animation: none;
     }
 
-    .slide {
-        transition: none;
-    }
-
     html {
         scroll-behavior: auto;
     }
